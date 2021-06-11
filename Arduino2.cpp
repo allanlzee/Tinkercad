@@ -3,7 +3,6 @@
 #define NOTE_F_SHARP 5
 #define NOTE_G_SHARP 6
 #define NOTE_A_SHARP 7
-
 #define PIEZO 2
 
 // frequencies of notes 
