@@ -33,18 +33,18 @@ void setup()
 void loop()
 {
   if (digitalRead(NOTE_C_SHARP) == 1) {
-    tone(PIEZO, C_SHARP, 2);	// plays note c#
+    tone(PIEZO, C_SHARP, 250);	// plays note c#
     
-  } else if (analogRead(NOTE_D_SHARP) == 1) {
+  } else if (digitalRead(NOTE_D_SHARP) == 1) {
     tone(PIEZO, D_SHARP, 250);	// plays note d#
     
-  } else if (analogRead(NOTE_F_SHARP) == 1) {
-    tone(PIEZO, D_SHARP, 250);	// plays note f#
+  } else if (digitalRead(NOTE_F_SHARP) == 1) {
+    tone(PIEZO, F_SHARP, 250);	// plays note f#
     
-  } else if (analogRead(NOTE_G_SHARP) == 1) {
+  } else if (digitalRead(NOTE_G_SHARP) == 1) {
     tone(PIEZO, G_SHARP, 250);	// plays note g#
     
-  } else if (analogRead(NOTE_A_SHARP) == 1) {
+  } else if (digitalRead(NOTE_A_SHARP) == 1) {
     tone(PIEZO, A_SHARP, 250);	// plays note a#
     
   } else {
