@@ -14,7 +14,7 @@
 int state;
 double octaveMultiplier;
 
-// frequencies of notes 
+// frequencies of notes #define POT 0
 double C = 0.0;
 double D = 0.0;
 double E = 0.0;
@@ -40,14 +40,14 @@ void setup()
   state = 0;
   octaveMultiplier = 0.0;
   
-  C = 261.63;
-  D = 293.66;
-  E = 329.63;
-  F = 349.23;
-  G = 392.00;
-  A = 440.00;
-  B = 493.88;
-  C_HIGH = 523.25;
+  C = 65.41;
+  D = 73.42;
+  E = 82.41;
+  F = 87.31;
+  G = 98.00;
+  A = 110.00;
+  B = 123.47;
+  C_HIGH = 130.81;
 }
 
 void loop()
