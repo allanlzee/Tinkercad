@@ -4,12 +4,15 @@
 #define SERVO3 11
 #define SERVO4 10
 
+#define PUSH 2
+
 Servo servo1; 
 Servo servo2; 
 Servo servo3; 
 Servo servo4; 
 
 int position = 0; 
+int start = 0; 
 
 void setup() {
   servo1.attach(SERVO1); 
@@ -19,21 +22,30 @@ void setup() {
 }
 
 void loop() {
-  for (position = 0; position <= 180; position++) {
-    servo1.write(position); 
-    servo2.write(position); 
-    servo3.write(position); 
-    servo4.write(position); 
-    delay(15);
+  if (digitalRead(PUSH) == 1) {
+    start = (start + 1) % 2; 
+    do {
+    } while (digitalRead(PUSH) == 1); 
   }
   
-  delay(1000); 
+  if (start == 1) {
+    
+    for (position = 0; position <= 180; position++) {
+      servo1.write(position); 
+      servo2.write(position); 
+      servo3.write(position); 
+      servo4.write(position); 
+      delay(15);
+  	}
   
-  for (position = 180; position >= 0; position--) {
-    servo1.write(position);
-    servo2.write(position); 
-    servo3.write(position); 
-    servo4.write(position); 
-    delay(15); 
+  	delay(1000); 
+  
+  	for (position = 180; position >= 0; position--) {
+      servo1.write(position);
+      servo2.write(position); 
+      servo3.write(position); 
+      servo4.write(position); 
+      delay(15); 
+    }
   }
 }
